@@ -1,8 +1,18 @@
 services:
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    image: frontend
+    ports:
+      - 49999:80
+    restart: unless-stopped
+
   user_management_api:
     container_name: user_management_api
     build: ./user_management
     image: user_management_api
+    environment:
+      JWT_SECRET_KEY: "en la playa se esta mejor que aqui"
     ports:
       - 50000:8080
     depends_on:
@@ -22,11 +32,15 @@ services:
     networks:
       - user_management_net
 
-  frontend:
-    container_name: frontend
-    build: ./frontend
+  multiplayer_service:
+    container_name: multiplayer_service
+    build: ./multiplayer
+    image: multiplayer_service
+    environment:
+      JWT_SECRET_KEY: "en la playa se esta mejor que aqui"
     ports:
-      - 49999:80
+      - 50001:8080
+    restart: unless-stopped
 
 networks:
   user_management_net:
