@@ -23,8 +23,6 @@ services:
     container_name: user_management_api
     build: ./user_management
     image: user_management_api
-    ports:
-      - 50000:8080
     volumes:
       - ./user_management/app:/usr/src/app
     depends_on:
@@ -49,8 +47,6 @@ services:
     container_name: multiplayer_service
     build: ./multiplayer
     image: multiplayer_service
-    ports:
-      - 50001:8080
     volumes:
       - ./multiplayer/app/multiplayer_service:/usr/src/app
     restart: unless-stopped
@@ -61,8 +57,6 @@ services:
     container_name: chat_service
     build: ./chat
     image: chat_service
-    ports:
-      - 50002:8080
     depends_on:
       - chat_db
     volumes:
@@ -87,8 +81,6 @@ services:
     container_name: match_history_api
     build: ./match_history
     image: match_history_api
-    ports:
-      - 50003:8080
     volumes:
       - ./match_history/app:/usr/src/app
     depends_on:
