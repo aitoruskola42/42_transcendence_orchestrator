@@ -5,7 +5,23 @@
 2. Clonar los repositorios de las aplicaciones en la carpeta apropiada
 
 ```bash
-git clone https://github.com/aitorfi/transcendence-frontend.git frontend/app && git clone https://github.com/aitorfi/transcendence_user_management_api.git user_management/app && git clone https://github.com/aitorfi/transcendence_multiplayer_service.git multiplayer/app && git clone https://github.com/aitorfi/transcendence_chat_service.git chat/app
+git clone https://github.com/aitorfi/transcendence-frontend.git frontend/app
+```
+
+```bash
+git clone https://github.com/aitorfi/transcendence_user_management_api.git
+```
+
+```bash
+git clone https://github.com/aitorfi/transcendence_multiplayer_service.git multiplayer/app
+```
+
+```bash
+git clone https://github.com/aitorfi/transcendence_chat_service.git chat/app
+```
+
+```bash
+git clone https://github.com/aitoruskola42/trascendence-tournament.git match_history/app
 ```
 
 3. Si teneis algún contenedor corriendo es posible que al crear los nuevos haya algún conflicto de nombres asi que revisad si teneis que eliminar algún contenedor y sus imágenes.
