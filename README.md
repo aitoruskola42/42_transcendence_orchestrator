@@ -9,7 +9,7 @@ git clone https://github.com/aitorfi/transcendence-frontend.git frontend/app
 ```
 
 ```bash
-git clone https://github.com/aitorfi/transcendence_user_management_api.git
+git clone https://github.com/aitorfi/transcendence_user_management_api.git user_management/app
 ```
 
 ```bash
