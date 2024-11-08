@@ -13,7 +13,7 @@ WORKDIR /usr/src/app
 COPY ./app/runserver.sh /usr/bin
 RUN chmod +x /usr/bin/runserver.sh
 
-RUN pip install Django channels daphne aiohttp jwt
+RUN pip install Django channels daphne aiohttp psycopg2 djangorestframework djangorestframework-simplejwt django-cors-headers
 
 EXPOSE 8080
 
